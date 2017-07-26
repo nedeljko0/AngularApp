@@ -1,0 +1,18 @@
+<section class="transactions-container">
+    <app-search-filter (onSearch)="handleSearch($event)" (onFilter)="handleSort($event)"></app-search-filter>
+    <ul>
+        <!-- loopam skozi transactionsLog in ustvarim fake transakcije v seznam-->
+        <li *ngFor="let log of transactionsLog">
+            <span class="bar" [style.backgroundColor]="log.categoryCode"></span>
+            <span class="date">{{log.transactionDate | date:'MMM d'}}</span>
+            <span class="image"><img width="40" [src]="log.merchantLogo"></span>
+            <span class="transactionType">
+                <p>
+                    <strong>{{log.merchant}}</strong>
+                    {{log.transactionType}}
+                </p>
+            </span>
+            <span class="amount">{{log.amount | addMinus | currency:'USD':true}}</span>
+        </li>
+    </ul>
+</section>

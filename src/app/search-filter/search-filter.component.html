@@ -1,0 +1,12 @@
+<section class="search-filter">
+    <div class="search">
+        <!-- trigeram funkcijo ko je keyup -->
+        <input type="search" #searchInput (keyup)="keyUpSubject.next(searchInput.value)" placeholder="Išči .." />
+    </div>
+    <div class="filters">
+        <i>Sort po</i>
+        <span #datum (click)="filter(1)">Datum</span>
+        <span #upravicenci (click)="filter(2)">Upravičenci</span>
+        <span #znesek (click)="filter(3)">Znesek</span>
+    </div>
+</section>

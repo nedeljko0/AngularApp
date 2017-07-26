@@ -1,0 +1,49 @@
+ul {
+    margin: 0 15px;
+    border-top: 2px solid #CACACA;
+    border-right: 2px solid #CACACA;
+}
+li {
+    display: table;
+    width: 100%;
+}
+li span {
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 2px solid #CACACA;
+}
+
+ul li .bar {
+    width: 10px;
+    border-bottom: none;
+}
+
+ul li .date {
+    text-align: center;
+}
+ul li .amount {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: 700;
+}
+
+ul li .transactionType {
+    text-align: left;
+}
+ul li .amount,
+ul li span p {
+    font-size: 16px;
+}
+ul li span p strong {
+    line-height:  20px;
+    display: block;
+    font-weight: 700;
+}
+
+ul li .amount,
+ul li .date,
+ul li .image {
+    width: 12%;
+}

@@ -1,0 +1,26 @@
+main {
+    width: 1200px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    min-height: 300px;
+    margin: auto;
+}
+
+/* nastavim obe okni na 100px, vendar z flex boxom rešim razmerje */
+main app-make-transfer,
+main app-recent-transactions {
+    width: 100px;
+    margin: 10px;
+}
+
+main app-make-transfer {
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
+}
+
+main app-recent-transactions {
+    -webkit-flex: 3 0 0;
+    flex: 3 0 0;
+}
